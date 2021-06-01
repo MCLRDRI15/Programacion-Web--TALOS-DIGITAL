@@ -1,0 +1,215 @@
+*{
+	margin:0; /**establece margen para los cuatro lados**/
+	padding: 0; /**espacio de relleno entre el contenido de un 
+				elemento y su borde**/
+	box-sizing: border-box; /**calcula el ancho y alto y 
+				en este caso bordea el tamaño del margen**/
+}
+
+body{
+	font-family: 'Roboto', 'Sans serif'; /**especifica tipo de fuente**/
+}
+
+.contenedor{
+	width: 90%; /**ancho - area del contenido de un elemento**/
+	max-width: 1200px; /**ancho maximo de un elemento**/
+	margin: auto; 
+}
+
+.bg_animate{
+	width: 100%;
+	height: 100vh;	/**Altura - en un contenedor o elemento**/
+	background: linear-gradient(to right, #fc3f5c , #ff7153); /**define el fondo de un contenedor o elemento**/
+	position: relative; /**especifica el posicionamiento de un elemento en el documento**/
+	overflow: hidden; /**especifica como se muestra un elemento en el documento,
+					  si este requiere ser recortado-o desplazado con un scroll**/
+}
+
+.header_nav{
+	width: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+}
+
+.header_nav .contenedor{
+	display: flex; /**convierte los elementos en este caso en elementos flexibles
+				   es decir, se pueden mover en el espacio del contenedor**/
+	justify-content: space-between; /**crea un espacio uniforme entre los elementos
+									que contenga**/
+	align-items:	center; /**organiza los elementos dentro del margen
+							segun sean requeridos en este caso centra lo que se
+							encuentra dentro del contenedor seleccionado**/
+	padding: 15px 0;
+}
+
+.header_nav h1{
+	color: #FFFF;
+	font-family: 'Gagalin';
+	font-size: 40px;
+}
+
+.header_nav nav a {
+	color: #FFFF;
+	text-decoration: none;
+	margin-right: 10px;
+}
+
+.banner{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 100%;
+}
+
+.banner_img{
+	animation: movimiento 2.5s linear infinite;
+}
+
+.banner_img img{
+	width: 600px;
+	border-radius: 150px 350px;
+	border:1px solid white;
+	display: block;
+}
+
+.banner_tittle h2{
+	color: #FFFF;
+	font-size: 60px;
+	font-weight: 800;
+	margin-bottom: 20px;
+}
+
+.banner_tittle .mensaje{
+	color: #FFFF;
+	font-size: 20px; 
+	text-decoration: none;
+	display: inline-block;
+	background: #ef6778;
+	padding: 20px;
+}
+
+/* Burbuja */
+
+.burbuja{
+	width: 80px;
+	height: 80px;
+	border-radius: 50%;
+	background: #FFFF;
+	opacity: .3;
+
+	position: absolute;
+	bottom: -150;
+	
+
+	animation: burbujas 3s linear infinite; 
+}
+
+.burbuja:nth-child(1){
+	width: 80px;
+	height: 80px;
+	left: 5%;
+	animation-duration: 3s;
+	animation-delay: 3s;
+}
+
+.burbuja:nth-child(2){
+	width: 100px;
+	height: 100px;
+	left: 35%;
+	animation-duration: 3s;
+	animation-delay: 2s
+}
+
+.burbuja:nth-child(3){
+	width: 60px;
+	height: 60px;
+	left: 55%;
+	animation-duration: 3s;
+	animation-delay: 1s
+}
+
+.burbuja:nth-child(4){
+	width: 85px;
+	height: 85px;
+	left: 70%;
+	animation-duration: 3s;
+	animation-delay: 2s
+}
+
+.burbuja:nth-child(5){
+	width: 65px;
+	height: 65px;
+	left: 90%;
+	animation-duration: 3s;
+	animation-delay: 3s
+}
+
+.burbuja:nth-child(6){
+	width: 55px;
+	height: 55px;
+	left: 95%;
+	animation-duration: 3s;
+	animation-delay: 1s
+}
+
+.burbuja:nth-child(7){
+	width: 75px;
+	height: 75px;
+	left: 20%;
+	animation-duration: 3s;
+	animation-delay: 1s
+}
+
+.burbuja:nth-child(8){
+	width: 25px;
+	height: 25px;
+	left: 40%;
+	animation-duration: 3s;
+	animation-delay: 1s
+}
+
+.burbuja:nth-child(9){
+	width: 25px;
+	height: 25px;
+	left: 90%;
+	animation-duration: 3s;
+	animation-delay: 2s
+}
+
+.burbuja:nth-child(10){
+	width: 25px;
+	height: 25px;
+	left: 25%;
+	animation-duration: 3s;
+	animation-delay: 1s
+}
+
+@keyframes burbujas{
+	0%{
+		bottom: 0;
+		opacity: 0;
+	}
+	30%{
+		transform: translateX(30px);
+	}
+	50%{
+		opacity: .4;
+	}
+	100%{
+		bottom: 100vh;
+		opacity: 0;
+	}
+}
+
+@keyframes movimiento{
+	0%{
+		transform: translateY(0);
+	}
+	50%{
+		transform: translateY(30px);
+	}
+	100%{
+		transform: translateY(0);
+	}
+}
